@@ -1,0 +1,40 @@
+:root {
+    --cOne : #161853;
+    --cTwo : #292C6D;
+    --cThree : #FAEDF0;
+    --cFour: #EC255A;
+}
+
+html , body {
+    width: 100vw;
+    height: 100vh;
+
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient( var(--cOne), var(--cTwo));
+    transform: perspective(400px);
+    display: flex;
+    justify-content: center;
+    perspective: 800px; 
+}
+
+h1 {
+    font-family:'Arial Narrow';
+    color: var(--cThree);
+    position: absolute;
+    font-size: 10rem;
+    animation: 10s animate forwards;
+    transform: rotateX(90deg) translateY(-200px);
+    animation: 4s animate forwards ease-out;
+    opacity: 0;
+    
+}
+
+@keyframes animate {
+    to {
+        transform: rotate(0) translateY(0px);
+        opacity: 1;
+    }
+}
